@@ -1,0 +1,112 @@
+.ourteam {
+  margin-top: 76px;
+  text-align: center;
+}
+
+.ourteam h3 {
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 53px;
+  letter-spacing: 0.0022em;
+  color: #12273c;
+  margin: 0;
+}
+
+.ourteam h4 {
+  font-size: 15px;
+  font-weight: 550;
+  letter-spacing: 0.0022em;
+  color: #12273c;
+  margin-top: 12px;
+}  
+
+.ourteam p{
+  margin-top: 5px;
+  font-size: 14px;
+
+  color: #12273ce3;
+}
+
+.ourteam h5 {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.0022em;
+  color: rgba(128, 128, 128, 0.692);
+  margin-top: 12px;
+
+}
+
+.firstblock {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 12px;
+}
+
+.item {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  box-shadow: 1px 1px 10px #bbb;
+  padding: 7px;
+}
+
+.item a {
+  cursor: pointer;
+  color: #8d53fd;
+  margin-top: 15px;
+  display: inline-block;
+  transition: all 0.5s;
+}
+
+.avatarimg img {
+  border-radius: 50%;
+  width: 100%;
+}
+
+.avatarimg div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.FaLinkedin {
+  margin-right: 7px;
+}
+
+@media (max-width: 992px) {
+  .firstblock {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+
+  .firstblock {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .ourteam h3 {
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 30px;
+    letter-spacing: 0.0022em;
+  }
+
+  .ourteam h4 {
+    font-size: 14px;
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .firstblock {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 420px) {
+  .firstblock {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

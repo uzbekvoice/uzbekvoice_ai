@@ -1,0 +1,214 @@
+.hakatonHeroWrappper {
+    background-image: url('/hakaton-hero-bg.png');
+    background-size: cover;
+    position: absolute;
+    background-repeat: no-repeat;
+    left: 0;
+    top: 80px;
+    width: 100%;
+    z-index: -1;
+}
+
+.hakatonHeroWrappper.one {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/hakaton-hero-bg.jpg');
+    background-size: auto;
+    background-position: 25% 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: 80px;
+    width: 100%;
+    z-index: -1;
+}
+
+.hakatonHero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 28px;
+    padding: 140px 100px 90px;
+    position: relative;
+    background-color: transparent;
+   
+}
+
+
+.hakatonHero.active {
+ grid-template-columns: 1fr;   
+ text-align: center;
+ padding-top: 160px;
+ padding-bottom: 120px;
+}
+
+.hakatonHero::after {
+    content: "";
+    filter: blur(80px);
+    background: linear-gradient(-45deg, #ee775275, #e73c7e87, #23a6d578, #23d5ab87);
+    background-size: 100% 100%;
+    animation: hakatonHeroAnim 4s linear infinite;
+    -webkit-filter: blur(80px);
+    position: absolute;
+    top: 120%;
+    left: 10%;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    /* z-index: -5; */
+}
+
+@keyframes hakatonHeroAnim { 
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.hakatonHero::before {
+    content: "";
+    filter: blur(46px);
+    background: -webkit-gradient(linear,
+            left top,
+            left bottom,
+            from(rgba(0, 133, 255, 0.58)),
+            to(rgba(173, 0, 255, 0.11)));
+    background: -o-linear-gradient(top,
+            rgba(0, 133, 255, 0.58) 0%,
+            rgba(173, 0, 255, 0.11) 100%);
+    background: linear-gradient(180deg,
+            rgba(0, 133, 255, 0.58) 0%,
+            rgba(173, 0, 255, 0.11) 100%);
+    -webkit-filter: blur(46px);
+    position: absolute;
+    bottom: 4%;
+    right: 2px;
+    width: 140px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+
+
+.hakatonHero_Left {
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 110%;
+    letter-spacing: 0.0022em;
+    color: #FFFFFF;
+}
+
+.hakatonHero_Right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hakatonHero_Right div {
+    margin-left: 100px;
+}
+
+.hakatonHero_Right div:first-child {
+    margin-left: 0px;
+}
+
+
+.hakatonHero_Right h4 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 69px;
+    text-align: center;
+    letter-spacing: -0.66px;
+    color: #FFFFFF;
+}
+
+.hakatonHero_Right p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: -0.66px;
+    color: #FFFFFF;
+}
+
+@media (max-width: 893px) {
+    .hakatonHero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .hakatonHero_Right {
+        margin-top: 30px;
+        padding: 0 100px;
+    }
+}
+
+@media (max-width: 767px) {
+    .hakatonHero_Left {
+        font-size: 40px;
+        line-height: 110%;
+    }
+
+    .hakatonHero_Right h4 {
+        font-size: 40px;        
+    }
+    .hakatonHero_Right p {
+        font-size: 16px;        
+    }
+    .hakatonHero::after {
+       
+        top: 130%;
+        left: 20%;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        /* z-index: -5; */
+    }
+}
+
+@media (max-width: 650px) {
+    .hakatonHero_Right {
+        padding: 0;
+    }  
+    
+ 
+}
+
+
+@media (max-width: 460px) {
+
+    .hakatonHero {
+        padding-top: 120px;
+        padding-bottom: 75px;
+    }
+
+    .hakatonHero_Right div {
+        margin-left: 60px;
+    }
+
+    .hakatonHero_Left {
+        font-size: 24px;
+        line-height: 110%;
+    }
+
+    .hakatonHero_Right h4 {
+        font-size: 24px;
+        line-height: 35px;
+    }
+    .hakatonHero_Right p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .hakatonHeroWrappper {
+        top: 64px;
+    }
+    .hakatonHeroWrappper.one {
+        top: 64px;
+    }
+}

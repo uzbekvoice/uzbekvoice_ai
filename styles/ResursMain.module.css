@@ -1,0 +1,206 @@
+.resursMain {
+    padding-top: 40px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.resursMainTitle {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    color: #2A2A2A;
+    text-align: center;
+    margin-top: 300px;
+}
+
+.parts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+}
+
+.parts button {
+    cursor: pointer;
+    margin: 0 6px;
+    margin-top: 16px;
+    font-weight: 400;
+    min-width: fit-content;
+    font-size: 16px;
+    line-height: 160%;
+    color: #717D8A;
+    border-radius: 18px;
+    background-color: #fff;
+    padding: 8px 16px;
+    border: 1px solid #717D8A;
+}
+
+.parts .activeBtn {
+    background: #8D53FD;
+    border: 1px solid #8D53FD;
+    border-radius: 16px;
+    color: #fff;
+}
+
+.resursCard {
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.resursCardBody h5 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 120%;
+    margin-bottom: 12px;
+    color: #2A2A2A;
+}
+
+.resursCardBody .descr {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: #696969;
+    margin-bottom: 15px;
+}
+
+.resursCardBody a {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 111.63%;
+    display: inline-flex;
+    align-items: center;
+    color: #8D53FD;
+}
+
+.resursCardBody a img {
+    margin-left: 8px;
+    width: 24px;
+    height: 24px;    
+}
+
+.resursCardHeader {
+    margin-left: 30px;
+}
+
+.resursCardHeader img {
+    width: 270px;
+    border-radius: 10px;
+}
+
+
+.partInfoMobile {
+    display: none;
+}
+
+.resursMobileCard {
+    margin-top: 24px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(80px);
+    border-radius: 24px;
+}
+
+.resursMobileCardHeader img {
+    width: 100%;
+    border-radius: 24px 24px 0px 0px;
+}
+
+.resursMobileCardBody {
+    padding: 24px 16px 34px;
+}
+
+.resursMobileCardBody h5 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 120%;
+    color: #2A2A2A;
+}
+
+.resursMobileCardBody p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: #696969;
+    margin-bottom: 18px;
+    margin-top: 12px;
+}
+
+.resursMobileCardBody a {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 111.63%;
+    display: inline-flex;
+    align-items: center;
+    color: #8D53FD;
+    margin-left: auto;
+}
+
+.resursMobileCardBody div {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.resursMobileCardBody a img {
+    margin-left: 8px;
+    width: 24px;
+    height: 24px;
+}
+
+
+@media (max-width: 992px) {
+    .resursMain {
+        width: 90%;
+    }
+
+    .resursMobileCardBody a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 767px) {
+    .resursMain {
+        width: 100%;
+    }
+
+    .resursMainTitle {
+        font-size: 22px;
+        margin-bottom: 260px;
+    }
+
+    .parts button {
+        padding: 3px 8px;
+        border-radius: 16px;
+        font-size: 14px;
+    }    
+}
+
+@media (max-width: 576px) {
+
+    .resursMainTitle {
+        font-size: 20px;
+        margin-bottom: 10px;
+        margin-top: 260px;
+    }
+
+    .partInfo {
+        display: none;
+    }
+
+    .partInfoMobile {
+        display: block;
+    }
+
+    .resursMobileCardBody a img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 410px) {
+    .parts {
+        justify-content: flex-start;
+    }
+}

@@ -1,0 +1,121 @@
+.yangilikByIdHero {
+    padding: 120px 0 125px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    font-family: "Objektiv";
+}
+
+.heroImg img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.heroBody {
+    margin-top: 40px;
+}
+
+.heroDate {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    color: #696969;
+    margin-bottom: 4px;
+}
+
+.heroTitleWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.heroTitleWrapper h3 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 120%;
+    color: #12273C;
+    margin: 10px 0;
+}
+
+.heroTitleRight {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.heroTitleRight span {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    color: #696969;
+}
+
+.heroTitleWrapper button {
+    margin-left: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(323.77deg, #8D53FD -1.4%, #B38CFF 95.18%), #FFFFFF;
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.heroDescr {
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    color: #717D8A;
+}
+
+
+@media (max-width: 992px) {
+    .heroTitleWrapper h3 {
+        font-size: 35px;
+    }
+
+    .heroTitleRight span {
+        font-size: 16px;
+    }
+
+    .heroDescr li {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 767px) {
+    .yangilikByIdHero {
+        width: 100%;
+        padding-bottom: 80px;
+    }
+
+    .heroTitleWrapper h3 {
+        font-size: 28px;
+    }
+
+    .iconWrapper {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media (max-width: 576px) {
+    .heroTitleWrapper h3 {
+        font-size: 20px;
+    }
+
+    .yangilikByIdHero {
+        padding-bottom: 40px;
+    }
+}
+
+@media (max-width: 403px) {
+    .heroTitleRight {
+        margin-top: 16px;
+    }
+}
