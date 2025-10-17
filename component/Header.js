@@ -204,17 +204,23 @@ function Header({ menuToggle, setMenuToggle, openLang, setOpenLang }) {
                   {qollanma}
                 </a>
               </Link>
-              <Link href="https://drive.google.com/drive/folders/18N5i7GD0LmUnNQok6BP3EC8PYov7pZDW">
-                <a
-                  onClick={() => setMenuToggle(false)}
-                  target="_blank"
-                  className={
-                    router.pathname == "https://drive.google.com/drive/folders/18N5i7GD0LmUnNQok6BP3EC8PYov7pZDW" ? "item active" : "item"
-                  }
-                >
-                  {dataset}
-                </a>
-              </Link>
+              <a
+                onClick={() => {
+                  window.open(
+                    "https://huggingface.co/datasets/DavronSherbaev/uzbekvoice-filtered",
+                    "_blank"
+                  );
+                  window.open(
+                    "https://huggingface.co/datasets/DavronSherbaev/uzbekvoice",
+                    "_blank"
+                  );
+                  return setMenuToggle(false);
+                }}
+                target="_blank"
+                className="item"
+              >
+                {dataset}
+              </a>
               <div
                 onClick={() => openOtherDropdown()}
                 onMouseOver={() => setOtherDropDown(true)}
