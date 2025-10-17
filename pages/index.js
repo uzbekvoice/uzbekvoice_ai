@@ -19,12 +19,12 @@ export async function getServerSideProps() {
   // const response = await directus.items("team_members_translations").readByQuery({
   //   fields: ["*"],
   // })
-  const res2 = await fetch(
-    "https://common.uzbekvoice.ai/api/v1/clips/leaderboard"
-  );
-  const res = await fetch(
-    "https://common.uzbekvoice.ai/api/v1/clips/votes/leaderboard"
-  );
+  // const res2 = await fetch(
+  //   "https://common.uzbekvoice.ai/api/v1/clips/leaderboard"
+  // );
+  // const res = await fetch(
+  //   "https://common.uzbekvoice.ai/api/v1/clips/votes/leaderboard"
+  // );
   const res3 = await fetch("https://admin.uzbekvoice.ai/items/partners");
   const res4 = await fetch(
     "https://admin.uzbekvoice.ai/items/team_members_translations"
@@ -39,52 +39,52 @@ export async function getServerSideProps() {
   const res7 = await fetch(
     "https://admin.uzbekvoice.ai/items/camp_page_translations"
   );
-  const res8 = await fetch(
-    "https://common.uzbekvoice.ai/api/v1/uz/clips/stats"
-  );
+  // const res8 = await fetch(
+  //   "https://common.uzbekvoice.ai/api/v1/uz/clips/stats"
+  // );
 
-  const data = await res.json();
-  const users = await res2.json();
+  // const data = await res.json();
+  // const users = await res2.json();
   const partners = await res3.json();
   const teamMembers = await res4.json();
   const faq = await res5.json();
   const steps = await res6.json();
   const camp = await res7.json();
-  const statsvotes = await res8.json();
+  // const statsvotes = await res8.json();
 
   return {
     props: {
-      users: data,
-      userslist: users,
+      // users: data,
+      // userslist: users,
       partners,
       teamMembers,
       faq,
       steps,
       camp,
-      statsvotes,
+      // statsvotes,
     },
   };
 }
 
 export default function Home({
-  users,
-  userslist,
+  // users,
+  // userslist,
   partners,
   teamMembers,
   faq,
   steps,
   camp,
-  statsvotes,
+  // statsvotes,
 }) {
   return (
     <div>
       <Hero HomeContent={HomeContent} />
       {/* <Marathon data={camp.data} /> */}
       <Slider HomeContent={HomeContent} />
-      <Stat stat={statsvotes} HomeContent={HomeContent} />
+      {/*<Stat stat={statsvotes} HomeContent={HomeContent} />*/}
       <Step steps={steps.data} HomeContent={HomeContent} />
       <Contribution HomeContent={HomeContent} />
-      <TopUser users={users} userslist={userslist} HomeContent={HomeContent} />
+      {/*<TopUser users={users} userslist={userslist} HomeContent={HomeContent} />*/}
       <Ourpartners HomeContent={HomeContent} />
       <InitiativePartners HomeContent={HomeContent} partners={partners.data} />
       <OurTeam data={teamMembers.data} />
