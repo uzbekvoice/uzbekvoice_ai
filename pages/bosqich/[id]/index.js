@@ -19,12 +19,12 @@ import TopUser from "../../../component/TopUser";
 
 
 export async function getServerSideProps() {
-  const res2 = await fetch(
-    "https://commonvoice.mozilla.org/api/v1/uz/clips/leaderboard"
-  );
-  const res = await fetch(
-    "https://commonvoice.mozilla.org/api/v1/uz/clips/votes/leaderboard"
-  );
+  // const res2 = await fetch(
+  //   "https://commonvoice.mozilla.org/api/v1/uz/clips/leaderboard"
+  // );
+  // const res = await fetch(
+  //   "https://commonvoice.mozilla.org/api/v1/uz/clips/votes/leaderboard"
+  // );
   const res3 = await fetch(
     "https://admin.uzbekvoice.ai/items/contest_stages_translations"
   );
@@ -45,8 +45,8 @@ export async function getServerSideProps() {
   );
   const formdata = await fetch("https://admin.uzbekvoice.ai/items/camp_form");
 
-  const data = await res.json();
-  const users = await res2.json();
+  // const data = await res.json();
+  // const users = await res2.json();
   const dataContest = await res3.json();
   const resGifts = await res4.json();
   const partners = await res5.json();
@@ -57,8 +57,8 @@ export async function getServerSideProps() {
 
   return {
     props: {
-      users: data,
-      userslist: users,
+      // users: data,
+      // userslist: users,
       dataContest,
       resGifts,
       partners,
@@ -71,8 +71,8 @@ export async function getServerSideProps() {
 }
 
 export default function Bosqich({
-  users,
-  userslist,
+  // users,
+  // userslist,
   dataContest,
   resGifts,
   partners,
@@ -195,8 +195,6 @@ export default function Bosqich({
           ))}
         </div>
       </div>
-
-      {parseInt(query.id) === 2 ?      <Winners bosqich={true} users={users} userslist={userslist} /> : <TopUser users={users} userslist={userslist} HomeContent={HomeContent}/>}
 
  
       <InitiativePartnersSteps
